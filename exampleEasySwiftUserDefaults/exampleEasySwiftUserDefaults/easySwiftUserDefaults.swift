@@ -52,18 +52,28 @@ open class easySwiftUserDefaults {
         switch type {
         case "String":
             response  = defaults.string(forKey: key)
+            return response as? String ?? String()
         case "Bool":
             response  = defaults.string(forKey: key)
+            return response as? Bool ?? Bool()
         case "Integer":
             response  = defaults.string(forKey: key)
+            return response as? Int ?? Int()
         case "Double":
             response  = defaults.string(forKey: key)
+            return response as? Double ?? Double()
         case "Object":
-            response  = defaults.string(forKey: key)
-        case "URL":
-            response  = defaults.string(forKey: key)
+            response  = defaults.object(forKey: key)
+            return response
+        case "Array":
+            response  = defaults.object(forKey: key)
+            return response as? [String] ?? [String]()
+        case "Dictionary":
+            response  = defaults.object(forKey: key)
+            return response as? [String: String] ?? [String: String]()
         default:
-            response  = defaults.string(forKey: key)
+            print("Select a var type")
+            response = ""
         }
         
         return response
