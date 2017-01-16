@@ -14,6 +14,11 @@ class easySwiftUserDefaults {
     
     static let defaults = UserDefaults.standard
     
+    
+    private static func save(type:String, key:String, value:Any) {
+        defaults.set(value, forKey: key)
+    }
+    
     //Guardar datos
     static func set(key:String, value:String) {
         save(type: "String", key: key, value: value)
@@ -35,9 +40,7 @@ class easySwiftUserDefaults {
         save(type: "Any", key: key, value: value)
     }
     
-    static func save(type:String, key:String, value:Any) {
-        defaults.set(value, forKey: key)
-    }
+
     
 
     //Obtener datos
