@@ -9,7 +9,7 @@
 import Foundation
 
 
-class easySwiftUserDefaults {
+open class easySwiftUserDefaults {
     
     
     static let defaults = UserDefaults.standard
