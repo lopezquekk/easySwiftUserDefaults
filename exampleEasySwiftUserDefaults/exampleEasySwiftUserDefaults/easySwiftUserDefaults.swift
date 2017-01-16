@@ -47,12 +47,6 @@ open class easySwiftUserDefaults {
     }
     
     //Obetener datos desde un array
-    static func getArray(key:String)->[Any] {
-        let data = easySwiftUserDefaults.defaults.array(forKey: key)!
-
-        return data 
-    }
-    
     static func getStringArray(key:String)->[String] {
         let data = easySwiftUserDefaults.defaults.array(forKey: key)
         
