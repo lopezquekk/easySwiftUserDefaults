@@ -15,32 +15,30 @@ open class easySwiftUserDefaults {
     static let defaults = UserDefaults.standard
     
     
-    private static func save(type:String, key:String, value:Any) {
+    private static func save(key:String, value:Any) {
         defaults.set(value, forKey: key)
     }
     
     //Guardar datos
     static func set(key:String, value:String) {
-        save(type: "String", key: key, value: value)
+        save(key: key, value: value)
     }
     
     static func set(key:String, value:Bool) {
-        save(type: "Bool", key: key, value: value)
+        save(key: key, value: value)
     }
     
     static func set(key:String, value:Int) {
-        save(type: "Int", key: key, value: value)
+        save(key: key, value: value)
     }
     
     static func set(key:String, value:Double) {
-        save(type: "Double", key: key, value: value)
+        save(key: key, value: value)
     }
     
     static func set(key:String, value:Any) {
-        save(type: "Any", key: key, value: value)
+        save(key: key, value: value)
     }
-    
-
     
 
     //Obtener datos
