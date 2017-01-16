@@ -8,78 +8,69 @@
 
 import Foundation
 
-open class easySwiftUserDefaults {
-    
-    
-    var defaults = UserDefaults.standard
-    //defaults.setObject("Coding Explorer", forKey: "userNameKey")
-    
-    init() {
-        
-    }
-    
-    func save(type:String,key:String, value:Any?)->Bool{
-        
-        switch type {
-            case "String":
-                defaults.set(value, forKey: key)
-            case "Bool":
-                defaults.set(value, forKey: key)
-            case "Integer":
-                defaults.set(value, forKey: key)
-            case "Double":
-                defaults.set(value, forKey: key)
-            case "Object":
-                defaults.set(value, forKey: key)
-            case "URL":
-                defaults.set(value, forKey: key)
-            default:
-                defaults.set(value, forKey: key)
-        }
-        
-       return true
-    }
-    
-    func change()->Bool{
-        
-        return true
-    }
-    
-    func getVal(type:String, key:String)->Any?{
-        
-        
-        let response:Any?
-        switch type {
-        case "String":
-            response  = defaults.string(forKey: key)
-            return response as? String ?? String()
-        case "Bool":
-            response  = defaults.string(forKey: key)
-            return response as? Bool ?? Bool()
-        case "Integer":
-            response  = defaults.string(forKey: key)
-            return response as? Int ?? Int()
-        case "Double":
-            response  = defaults.string(forKey: key)
-            return response as? Double ?? Double()
-        case "Object":
-            response  = defaults.object(forKey: key)
-            return response
-        case "Array":
-            response  = defaults.object(forKey: key)
-            return response as? [String] ?? [String]()
-        case "Dictionary":
-            response  = defaults.object(forKey: key)
-            return response as? [String: String] ?? [String: String]()
-        default:
-            print("Select a var type")
-            response = ""
-        }
-        
-        return response
-    }
 
+class easySwiftUserDefaults {
     
     
+    static let defaults = UserDefaults.standard
     
+    //Guardar datos
+    static func set(key:String, value:String) {
+        save(type: "String", key: key, value: value)
+    }
+    
+    static func set(key:String, value:Bool) {
+        save(type: "Bool", key: key, value: value)
+    }
+    
+    static func set(key:String, value:Int) {
+        save(type: "Int", key: key, value: value)
+    }
+    
+    static func set(key:String, value:Double) {
+        save(type: "Double", key: key, value: value)
+    }
+    
+    static func set(key:String, value:Any) {
+        save(type: "Any", key: key, value: value)
+    }
+    
+    static func save(type:String, key:String, value:Any) {
+        defaults.set(value, forKey: key)
+    }
+    
+
+    //Obtener datos
+    static func getString(key:String)->String {
+        var data = easySwiftUserDefaults.defaults.string(forKey: key)
+        if data == nil {
+            data = ""
+        }
+        
+        return data!
+    }
+    
+    static func getBool(key:String)->Bool {
+        let data = easySwiftUserDefaults.defaults.bool(forKey: key) as Bool
+        
+        return data
+    }
+    
+    static func getInt(key:String)->Int {
+        let data = easySwiftUserDefaults.defaults.integer (forKey: key)
+        
+        return data
+    }
+    
+    static func getDouble(key:String)->Double {
+        let data = easySwiftUserDefaults.defaults.double(forKey: key)
+
+        return data
+    }
+    
+    static func getObject(key:String)->Any?{
+        let data = easySwiftUserDefaults.defaults.object(forKey: key)
+        
+        return data
+    }
 }

@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        easySwiftUserDefaults.set(key: "test", value: "valor")
+        let test = easySwiftUserDefaults.getObject(key: "test2")
+        
+        print("PRINT", test)
+        
+        
         return true
     }
 
