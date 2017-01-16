@@ -10,22 +10,14 @@ import Foundation
 
 
 open class easySwiftUserDefaults {
-    
-    
     static let defaults = UserDefaults.standard
-    
-    
-    private static func save(key:String, value:Any) {
-        defaults.set(value, forKey: key)
-    }
     
     //Guardar datos
     static func set(key:String, value:Any) {
-        save(key: key, value: value)
+        defaults.set(value, forKey: key)
     }
-
     
-
+    
     //Obtener datos
     static func getString(key:String)->String {
         var data = easySwiftUserDefaults.defaults.string(forKey: key)
