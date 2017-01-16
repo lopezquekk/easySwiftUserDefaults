@@ -20,25 +20,10 @@ open class easySwiftUserDefaults {
     }
     
     //Guardar datos
-    static func set(key:String, value:String) {
-        save(key: key, value: value)
-    }
-    
-    static func set(key:String, value:Bool) {
-        save(key: key, value: value)
-    }
-    
-    static func set(key:String, value:Int) {
-        save(key: key, value: value)
-    }
-    
-    static func set(key:String, value:Double) {
-        save(key: key, value: value)
-    }
-    
     static func set(key:String, value:Any) {
         save(key: key, value: value)
     }
+
     
 
     //Obtener datos
@@ -69,6 +54,55 @@ open class easySwiftUserDefaults {
         return data
     }
     
+    //Obetener datos desde un array
+    static func getArray(key:String)->[Any] {
+        let data = easySwiftUserDefaults.defaults.array(forKey: key)!
+
+        return data 
+    }
+    
+    static func getStringArray(key:String)->[String] {
+        let data = easySwiftUserDefaults.defaults.array(forKey: key)
+        
+        if !(data is [String])  {
+            return [String]()
+        }
+        
+        return data! as! [String]
+    }
+    
+    static func getBoolArray(key:String)->[Bool] {
+        let data = easySwiftUserDefaults.defaults.array(forKey: key)
+        
+        if !(data is [Bool])  {
+            return [Bool]()
+        }
+        
+        return data! as! [Bool]
+    }
+    
+    static func getIntArray(key:String)->[Int] {
+        let data = easySwiftUserDefaults.defaults.array(forKey: key)
+        
+        if !(data is [Int])  {
+            return [Int]()
+        }
+        
+        return data! as! [Int]
+    }
+    
+    static func getDoubleArray(key:String)->[Double] {
+        let data = easySwiftUserDefaults.defaults.array(forKey: key)
+        
+        if !(data is [Double])  {
+            return [Double]()
+        }
+        
+        return data! as! [Double]
+    }
+    
+    
+    //Obtener cualquier elemento
     static func getObject(key:String)->Any?{
         let data = easySwiftUserDefaults.defaults.object(forKey: key)
         
