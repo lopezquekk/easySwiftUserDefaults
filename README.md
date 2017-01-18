@@ -18,9 +18,9 @@ Forget about write code like this:
         
         
         print(ESDefaults.getString(key: "Test"))
-        print(ESDefaults.getStringArray(key: "Test"))
-        print(ESDefaults.getInt(key: "Test"))
-        print(ESDefaults.getBool(key: "Test"))
+        print(ESDefaults.getStringArray(key: "Test1"))
+        print(ESDefaults.getInt(key: "Test2"))
+        print(ESDefaults.getBool(key: "Test3"))
         
 # INSTALL IT
  
