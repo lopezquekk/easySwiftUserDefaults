@@ -16,6 +16,6 @@ A simple and tiny library for using  "Standard User Defaults" in Swift 3.0+
         
  # INSTALL IT
  
- For installing this tiny library you need to add the file **ESDefaults.swift**.
+ For installing this tiny library you need to add the file **ESDefaults.swift** to your project (Sorry, we don't have pod support yet).
  
  We're gonna have pod install soon, be patience :) :)
