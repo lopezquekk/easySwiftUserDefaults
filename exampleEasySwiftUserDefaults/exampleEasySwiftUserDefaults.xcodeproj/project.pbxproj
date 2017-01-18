@@ -12,7 +12,7 @@
 		7908464D1E296CEA005484A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7908464B1E296CEA005484A7 /* Main.storyboard */; };
 		7908464F1E296CEA005484A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7908464E1E296CEA005484A7 /* Assets.xcassets */; };
 		790846521E296CEA005484A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790846501E296CEA005484A7 /* LaunchScreen.storyboard */; };
-		7908465A1E297081005484A7 /* easySwiftUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790846591E297081005484A7 /* easySwiftUserDefaults.swift */; };
+		7908465A1E297081005484A7 /* ESDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790846591E297081005484A7 /* ESDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		7908464E1E296CEA005484A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		790846511E296CEA005484A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		790846531E296CEA005484A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		790846591E297081005484A7 /* easySwiftUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = easySwiftUserDefaults.swift; sourceTree = "<group>"; };
+		790846591E297081005484A7 /* ESDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				7908464E1E296CEA005484A7 /* Assets.xcassets */,
 				790846501E296CEA005484A7 /* LaunchScreen.storyboard */,
 				790846531E296CEA005484A7 /* Info.plist */,
-				790846591E297081005484A7 /* easySwiftUserDefaults.swift */,
+				790846591E297081005484A7 /* ESDefaults.swift */,
 			);
 			path = exampleEasySwiftUserDefaults;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			files = (
 				7908464A1E296CE9005484A7 /* ViewController.swift in Sources */,
 				790846481E296CE9005484A7 /* AppDelegate.swift in Sources */,
-				7908465A1E297081005484A7 /* easySwiftUserDefaults.swift in Sources */,
+				7908465A1E297081005484A7 /* ESDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +303,7 @@
 				790846581E296CEA005484A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

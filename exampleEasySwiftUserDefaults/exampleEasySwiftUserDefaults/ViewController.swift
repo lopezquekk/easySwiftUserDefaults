@@ -18,5 +18,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+        ESDefaults.set(key: "Prueba", value: "Prueba")
+        ESDefaults.set(key: "Prueba", value: "Prueba")
+        ESDefaults.set(key: "Prueba", value: "Prueba")
+        ESDefaults.set(key: "Prueba", value: "Prueba")
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 
-open class easySwiftUserDefaults {
+open class ESDefaults {
     static let defaults = UserDefaults.standard
     
     //Guardar datos
@@ -20,7 +20,7 @@ open class easySwiftUserDefaults {
     
     //Obtener datos
     static func getString(key:String)->String {
-        var data = easySwiftUserDefaults.defaults.string(forKey: key)
+        var data = ESDefaults.defaults.string(forKey: key)
         if data == nil {
             data = ""
         }
@@ -29,26 +29,26 @@ open class easySwiftUserDefaults {
     }
     
     static func getBool(key:String)->Bool {
-        let data = easySwiftUserDefaults.defaults.bool(forKey: key) as Bool
+        let data = ESDefaults.defaults.bool(forKey: key) as Bool
         
         return data
     }
     
     static func getInt(key:String)->Int {
-        let data = easySwiftUserDefaults.defaults.integer (forKey: key)
+        let data = ESDefaults.defaults.integer (forKey: key)
         
         return data
     }
     
     static func getDouble(key:String)->Double {
-        let data = easySwiftUserDefaults.defaults.double(forKey: key)
+        let data = ESDefaults.defaults.double(forKey: key)
 
         return data
     }
     
     //Obetener datos desde un array
     static func getStringArray(key:String)->[String] {
-        let data = easySwiftUserDefaults.defaults.array(forKey: key)
+        let data = ESDefaults.defaults.array(forKey: key)
         
         if !(data is [String])  {
             return [String]()
@@ -58,7 +58,7 @@ open class easySwiftUserDefaults {
     }
     
     static func getBoolArray(key:String)->[Bool] {
-        let data = easySwiftUserDefaults.defaults.array(forKey: key)
+        let data = ESDefaults.defaults.array(forKey: key)
         
         if !(data is [Bool])  {
             return [Bool]()
@@ -68,7 +68,7 @@ open class easySwiftUserDefaults {
     }
     
     static func getIntArray(key:String)->[Int] {
-        let data = easySwiftUserDefaults.defaults.array(forKey: key)
+        let data = ESDefaults.defaults.array(forKey: key)
         
         if !(data is [Int])  {
             return [Int]()
@@ -78,7 +78,7 @@ open class easySwiftUserDefaults {
     }
     
     static func getDoubleArray(key:String)->[Double] {
-        let data = easySwiftUserDefaults.defaults.array(forKey: key)
+        let data = ESDefaults.defaults.array(forKey: key)
         
         if !(data is [Double])  {
             return [Double]()
@@ -90,7 +90,7 @@ open class easySwiftUserDefaults {
     
     //Obtener cualquier elemento
     static func getObject(key:String)->Any?{
-        let data = easySwiftUserDefaults.defaults.object(forKey: key)
+        let data = ESDefaults.defaults.object(forKey: key)
         
         return data
     }
