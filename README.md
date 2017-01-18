@@ -1,6 +1,14 @@
 # easySwiftUserDefaults
 A simple and tiny library for using  "Standard User Defaults" in Swift 3.0+
 
+Forget about write code like this:
+
+        let defaults = UserDefaults.standard
+        defaults.set(25, forKey: "Age")
+        let array = defaults.object(forKey:"SavedArray") as? [String] ?? [String]()
+        //or this, wtf???
+        let dict = defaults.object(forKey: "SavedDict") as? [String: String] ?? [String: String]()
+
 # HOW TO USE IT
 
         ESDefaults.set(key: "Test", value: "String")
@@ -14,8 +22,20 @@ A simple and tiny library for using  "Standard User Defaults" in Swift 3.0+
         print(ESDefaults.getInt(key: "Test"))
         print(ESDefaults.getBool(key: "Test"))
         
- # INSTALL IT
+# INSTALL IT
  
  For installing this tiny library you need to add the file **ESDefaults.swift** to your project (Sorry, we don't have pod support yet).
+ 
+# SUPPORT DATA TYPES
+
+- String
+- Array
+- String Array
+- Int Array
+- Double Array
+- Object
+- Dictionary
+- Boolean
+- Int
  
  We're gonna have pod install soon, be patience :) :)
