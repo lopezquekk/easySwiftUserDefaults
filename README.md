@@ -1,3 +1,5 @@
+![alt text](https://raw.githubusercontent.com/lopezquekk/easySwiftUserDefaults/master/ES.png)
+
 # easySwiftUserDefaults
 A simple and tiny library for using  "Standard User Defaults" in Swift 3.0+
 
@@ -11,6 +13,8 @@ Forget about write code like this:
 
 # HOW TO USE IT
 
+```swift
+
         ESDefaults.set(key: "Test", value: "String")
         ESDefaults.set(key: "Test1", value: ["Array","Test"])
         ESDefaults.set(key: "Test2", value: 29)
@@ -21,6 +25,8 @@ Forget about write code like this:
         print(ESDefaults.getStringArray(key: "Test1"))
         print(ESDefaults.getInt(key: "Test2"))
         print(ESDefaults.getBool(key: "Test3"))
+        
+ ```
         
 # INSTALL IT
  
