@@ -19,9 +19,9 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
-        ESDefaults.set(key: "Prueba", value: "Prueba")
-        ESDefaults.set(key: "Prueba", value: "Prueba")
-        ESDefaults.set(key: "Prueba", value: "Prueba")
-        ESDefaults.set(key: "Prueba", value: "Prueba")
+        ESDefaults.set(key: "Test", value: "String")
+        ESDefaults.set(key: "Test1", value: ["Array","Test"])
+        ESDefaults.set(key: "Test2", value: 29)
+        ESDefaults.set(key: "Test3", value: "Prueba")
     }
 }
