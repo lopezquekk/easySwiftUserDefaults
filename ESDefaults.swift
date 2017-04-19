@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 
 open class ESDefaults {
@@ -17,15 +18,13 @@ open class ESDefaults {
         defaults.set(value, forKey: key)
     }
     
-    
     //Obtener datos
-    static func getString(key:String)->String {
-        var data = ESDefaults.defaults.string(forKey: key)
-        if data == nil {
-            data = ""
+    static func getString(key:String)->String? {
+        if let data = ESDefaults.defaults.string(forKey: key) {
+            return data
         }
         
-        return data!
+        return nil
     }
     
     static func getBool(key:String)->Bool {
@@ -47,51 +46,57 @@ open class ESDefaults {
     }
     
     //Obetener datos desde un array
-    static func getStringArray(key:String)->[String] {
-        let data = ESDefaults.defaults.array(forKey: key)
+    static func getStringArray(key:String)->[String]? {
         
-        if !(data is [String])  {
-            return [String]()
+        if let data = ESDefaults.defaults.array(forKey: key) {
+            return data as? [String]
         }
         
-        return data! as! [String]
+        return nil
     }
     
-    static func getBoolArray(key:String)->[Bool] {
-        let data = ESDefaults.defaults.array(forKey: key)
-        
-        if !(data is [Bool])  {
-            return [Bool]()
+    static func getBoolArray(key:String)->[Bool]? {
+        if let data = ESDefaults.defaults.array(forKey: key) {
+            return data as? [Bool]
         }
         
-        return data! as! [Bool]
+        return nil
     }
     
-    static func getIntArray(key:String)->[Int] {
-        let data = ESDefaults.defaults.array(forKey: key)
+    static func getIntArray(key:String)->[Int]? {
         
-        if !(data is [Int])  {
-            return [Int]()
+        if let data = ESDefaults.defaults.array(forKey: key) {
+            return data as? [Int]
         }
         
-        return data! as! [Int]
+        return nil
     }
     
-    static func getDoubleArray(key:String)->[Double] {
-        let data = ESDefaults.defaults.array(forKey: key)
-        
-        if !(data is [Double])  {
-            return [Double]()
+    static func getDoubleArray(key:String)->[Double]? {
+        if let data = ESDefaults.defaults.array(forKey: key) {
+            return data as? [Double]
         }
         
-        return data! as! [Double]
+        return nil
     }
     
+    static func getJSON(key:String)->JSON? {
+        if let data = ESDefaults.defaults.string(forKey: key) {
+            return JSON(parseJSON: data)
+        }
+        
+        return nil
+    }
     
     //Obtener cualquier elemento
     static func getObject(key:String)->Any?{
         let data = ESDefaults.defaults.object(forKey: key)
         
         return data
+    }
+    
+    //Eliminar
+    static func remove(key:String) {
+        ESDefaults.defaults.removeObject(forKey: key)
     }
 }
