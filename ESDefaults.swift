@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 
 open class ESDefaults {
@@ -75,14 +74,6 @@ open class ESDefaults {
     static func getDoubleArray(key:String)->[Double]? {
         if let data = ESDefaults.defaults.array(forKey: key) {
             return data as? [Double]
-        }
-        
-        return nil
-    }
-    
-    static func getJSON(key:String)->JSON? {
-        if let data = ESDefaults.defaults.string(forKey: key) {
-            return JSON(parseJSON: data)
         }
         
         return nil
