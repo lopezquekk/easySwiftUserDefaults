@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 open class ESDefaults {
     static let defaults = UserDefaults.standard
     
